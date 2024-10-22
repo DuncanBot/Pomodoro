@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9c2a77df-46dc-402d-bea2-c5283a65203a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Pomodoro.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pomodoro.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification_sound.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pomodoro.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pomodoro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pomodoro_sessions.json" beforeDir="false" afterPath="$PROJECT_DIR$/pomodoro_sessions.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +37,7 @@
   "keyToString": {
     "Python.Pomodoro.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "C:/Users/19733/PycharmProjects/Pomodoro"
   }

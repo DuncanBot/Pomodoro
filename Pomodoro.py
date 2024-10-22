@@ -1,12 +1,13 @@
+import time
 import json
 import os
+import threading
 import tkinter as tk
 from tkinter import messagebox
-
-from playsound import playsound
+import pygame  # Import the pygame library
 
 # Constants for the Pomodoro
-WORK_DURATION = 1 * 60  # 25 minutes
+WORK_DURATION = 25 * 60  # 25 minutes
 SHORT_BREAK_DURATION = 5 * 60  # 5 minutes
 LONG_BREAK_DURATION = 15 * 60  # 15 minutes
 POMODOROS_BEFORE_LONG_BREAK = 4
@@ -25,6 +26,9 @@ class PomodoroApp:
         self.current_timer = None
         self.is_running = False
         self.time_left = WORK_DURATION
+
+        # Initialize pygame mixer for sound
+        pygame.mixer.init()
 
         # Create GUI elements
         self.label = tk.Label(base, text="Pomodoro Timer", font=("Helvetica", 16))
@@ -108,7 +112,8 @@ class PomodoroApp:
     def play_notification():
         # Play a sound notification when a session ends
         try:
-            playsound("notification_sound.mp3")
+            pygame.mixer.music.load("notification_sound.mp3")  # Load the sound file
+            pygame.mixer.music.play()  # Play the sound
         except Exception as e:
             print(f"Notification sound could not be played: {e}")
 
@@ -117,6 +122,7 @@ class PomodoroApp:
         if messagebox.askokcancel("Quit", "Do you want to quit the Pomodoro timer?"):
             if self.current_timer:
                 self.root.after_cancel(self.current_timer)
+            pygame.mixer.quit()  # Quit the pygame mixer
             self.root.destroy()
 
 if __name__ == "__main__":
